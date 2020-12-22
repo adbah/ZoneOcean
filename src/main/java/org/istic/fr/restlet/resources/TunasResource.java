@@ -31,10 +31,14 @@ public class TunasResource  extends ServerResource{
     }
 
     @Get("json")
-    public Representation getRequin() throws Exception
-    {
+    public Representation getTunas() throws Exception
+    { 
+        int requinId=0;
         String requinsIdString = (String) getRequest().getAttributes().get("RequinsId");
-        int requinId = Integer.valueOf(requinsIdString);
+        if(requinsIdString!=null) {
+        	requinId= Integer.valueOf(requinsIdString);
+        } 
+         
         String result = backend_.getDatabase().getRequin(requinId);
 
         JSONObject requinObject = new JSONObject();
