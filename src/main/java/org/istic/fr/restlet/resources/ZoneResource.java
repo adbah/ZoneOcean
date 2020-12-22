@@ -15,7 +15,7 @@ import org.restlet.resource.Post;
 
 /**
  *
- * Resource exposing a user.
+ * Resource .
  *
  * @author Marc TSIVANYO
  * @author BAH Adama
